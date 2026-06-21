@@ -69,6 +69,8 @@ async function onSearch(e) {
 }
 
 async function onLoadMore() {
+  // hide the load more button immediately to prevent duplicate clicks
+  hideLoadMoreButton();
   page += 1;
   showLoader();
   try {
